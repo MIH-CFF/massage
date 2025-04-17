@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asian Traditional Healing Arts</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #81c784;
+        --secondary-color: #388e3c;
+        --text-color: #e0e0e0;
+        --bg-color: #121212;
+        --card-bg: #1e1e1e;
+        --border-color: #333;
+        --shadow-color: rgba(0, 0, 0, 0.3);
+        --header-bg: #1a1a1a;
+        --footer-bg: #121212;
+        --icon-color: #bbb;
+        --link-hover: #a5d6a7;
+        --transition-speed: 0.3s;
+      }
+
+      [data-theme="light"] {
+        --primary-color: #388e3c;
+        --secondary-color: #81c784;
+        --text-color: #333;
+        --bg-color: #f4f9f4;
+        --card-bg: #fff;
+        --border-color: #e0e0e0;
+        --shadow-color: rgba(0, 0, 0, 0.08);
+        --header-bg: #fff;
+        --footer-bg: #f8f9fa;
+        --icon-color: #555;
+        --link-hover: #2e7d32;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.7;
+        transition: background-color var(--transition-speed) ease,
+          color var(--transition-speed) ease;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Playfair Display", serif;
+        color: var(--primary-color);
+      }
+
+      .header-container {
+        background-color: var(--header-bg);
+        box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: background-color var(--transition-speed) ease;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        font-weight: bold;
+        text-shadow: 0.05rem 0.05rem rgba(179, 229, 190, 0.3);
+        white-space: nowrap;
+        font-family: "Playfair Display", serif;
+      }
+
+      .nav-wrapper {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+      }
+
+      .nav-links li {
+        margin-left: 1rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text-color);
+        transition: color var(--transition-speed) ease;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        display: block;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary-color);
+      }
+
+      .banner-space {
+        padding: 2.5rem 1rem;
+        text-align: center;
+        background-color: rgba(233, 250, 233, 0.7);
+        color: #666;
+        font-size: 1rem;
+        border-bottom: 1px solid #d0e7d0;
+        transition: all var(--transition-speed) ease;
+      }
+
+      [data-theme="dark"] .banner-space {
+        background-color: rgba(30, 70, 30, 0.7);
+        color: #ccc;
+        border-bottom-color: #2a4a2a;
+      }
+
+      .ad-space {
+        padding: 1rem;
+        text-align: center;
+        background-color: var(--card-bg);
+        margin: 1rem auto;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.1rem 0.3rem var(--shadow-color);
+        border: 1px solid var(--border-color);
+        transition: all var(--transition-speed) ease;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 3rem auto;
+        padding: 2rem;
+        background-color: var(--card-bg);
+        box-shadow: 0 0.5rem 1rem var(--shadow-color);
+        border-radius: 0.6rem;
+        transition: all var(--transition-speed) ease;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        line-height: 1.2;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        border-bottom: 0.2rem solid var(--secondary-color);
+        padding-bottom: 0.8rem;
+        margin-top: 3.5rem;
+        line-height: 1.3;
+      }
+
+      h3 {
+        font-size: 1.6rem;
+        margin-top: 2.2rem;
+        color: var(--primary-color);
+      }
+
+      p {
+        color: var(--text-color);
+        margin-bottom: 1.5rem;
+        font-size: 1.05rem;
+        line-height: 1.8;
+      }
+
+      .section {
+        margin-bottom: 3rem;
+      }
+
+      .image-container {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
+        transition: transform var(--transition-speed) ease;
+      }
+
+      .image-container:hover {
+        transform: translateY(-5px);
+      }
+
+      .image-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .image-container:hover img {
+        transform: scale(1.03);
+      }
+
+      .important {
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      .latex-block {
+        display: block;
+        margin: 0.8rem 0;
+        padding: 1.2rem;
+        background-color: rgba(241, 248, 233, 0.3);
+        border: 0.1rem solid rgba(220, 237, 200, 0.3);
+        border-radius: 0.3rem;
+        overflow-x: auto;
+        font-size: 1.05rem;
+        color: var(--text-color);
+        transition: all var(--transition-speed) ease;
+      }
+
+      [data-theme="dark"] .latex-block {
+        background-color: rgba(30, 40, 30, 0.5);
+        border-color: rgba(60, 80, 60, 0.5);
+      }
+
+      .nav-item .nav-link {
+        color: var(--text-color);
+      }
+
+      .nav-item .nav-link:hover {
+        color: var(--primary-color);
+      }
+
+      .theme-toggle {
+        background: none;
+        border: none;
+        color: var(--icon-color);
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-left: 1rem;
+        transition: color var(--transition-speed) ease;
+      }
+
+      .theme-toggle:hover {
+        color: var(--primary-color);
+      }
+
+      /* Collapsible content */
+      .collapsible-content {
+        max-height: 120px;
+        overflow: hidden;
+        position: relative;
+        transition: max-height 0.5s ease;
+      }
+
+      .collapsible-content.collapsed {
+        max-height: 120px;
+      }
+
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+
+      .collapsible-content.collapsed::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0),
+          var(--card-bg)
+        );
+        pointer-events: none;
+      }
+
+      [data-theme="dark"] .collapsible-content.collapsed::after {
+        background: linear-gradient(
+          to bottom,
+          rgba(30, 30, 30, 0),
+          var(--card-bg)
+        );
+      }
+
+      .read-more-btn {
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        cursor: pointer;
+        font-weight: 600;
+        padding: 0.5rem 0;
+        display: inline-flex;
+        align-items: center;
+        margin-top: 0.5rem;
+      }
+
+      .read-more-btn i {
+        margin-left: 0.5rem;
+        transition: transform 0.3s ease;
+      }
+
+      .read-more-btn.expanded i {
+        transform: rotate(180deg);
+      }
+
+      /* Footer */
+      .footer {
+        background-color: var(--footer-bg);
+        padding: 3rem 0;
+        border-top: 1px solid var(--border-color);
+        transition: all var(--transition-speed) ease;
+      }
+
+      .footer h5 {
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+      }
+
+      .footer ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color var(--transition-speed) ease;
+      }
+
+      .footer ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      .footer .text-muted {
+        color: var(--text-color) !important;
+        opacity: 0.8;
+      }
+
+      .footer .list-inline-item a {
+        color: var(--icon-color);
+        transition: color var(--transition-speed) ease;
+      }
+
+      .footer .list-inline-item a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 992px) {
+        .section-header {
+          flex-direction: column;
+        }
+
+        .image-container {
+          width: 100% !important;
+          margin-left: 0 !important;
+          margin-top: 1.5rem;
+        }
+
+        h1 {
+          font-size: 2.4rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-container {
+          padding: 0.5rem 1rem;
+          flex-wrap: nowrap;
+        }
+
+        .logo {
+          font-size: 1.2rem;
+        }
+
+        .nav-wrapper {
+          display: block;
+          width: 100%;
+        }
+
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: var(--header-bg);
+          box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
+          z-index: 1000;
+        }
+
+        .nav-links li {
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-links li:last-child {
+          border-bottom: none;
+        }
+
+        .navbar-toggler {
+          border: none;
+          background: none;
+          cursor: pointer;
+          padding: 0;
+          color: var(--icon-color);
+        }
+
+        .navbar-toggler-icon {
+          display: inline-block;
+          width: 1.5em;
+          height: 1.5em;
+          vertical-align: middle;
+          content: "";
+          background: no-repeat center center;
+          background-size: 100% 100%;
+          background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        [data-theme="dark"] .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .nav-open .nav-links {
+          display: flex;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        h2 {
+          font-size: 1.8rem;
+          margin-top: 2.5rem;
+        }
+
+        .container {
+          padding: 1.5rem;
+          margin: 2rem auto;
+        }
+      }
+
+      @media (max-width: 576px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        h2 {
+          font-size: 1.6rem;
+        }
+
+        .banner-space {
+          padding: 1.5rem 1rem;
+        }
+
+        .footer {
+          padding: 2rem 0;
+        }
+
+        .footer .col-lg-4 {
+          margin-bottom: 1.5rem;
+          text-align: center !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header-container">
+      <p class="logo">🕊️ Asian Massage</p>
+
+      <div class="nav-wrapper">
+        <button class="navbar-toggler" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <nav>
+          <ul class="nav-links">
+            <li class="nav-item">
+              <a class="nav-link" href="#thai-massage">Thai Massage</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tui-na">Tui Na</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#shiatsu">Shiatsu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ayurvedic-massage"
+                >Ayurvedic Massage</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#korean-hand-therapy"
+                >Korean Hand Therapy</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#balinese-massage">Balinese Massage</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tibetan-ku-nye">Tibetan Ku Nye</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="theme-toggle" aria-label="Toggle light mode">
+          <i class="fas fa-sun"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="banner-space">
+      <div class="container text-center">
+        <span
+          ><h1>
+            <b
+              >A Comprehensive Guide to Asian Massage Modalities for Wellness
+              Clients</b
+            >
+          </h1></span
+        >
+        <span style="font-size: 1.1rem; color: var(--primary-color)"
+          >✨ Discover the Healing Touch of Asian massage ✨</span
+        >
+      </div>
+    </div>
+
+    <div class="ad-space">
+      <div class="container" style="text-align: center">
+        <p
+          style="
+            font-size: 0.95rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+          "
+        >
+          <strong style="color: var(--primary-color)">Special Offer:</strong>
+          Elevate your well-being!
+        </p>
+        <p
+          style="
+            font-size: 0.85rem;
+            color: var(--text-color);
+            margin-bottom: 0.75rem;
+            opacity: 0.8;
+          "
+        >
+          Experience the soothing benefits of our partner's premium herbal teas.
+        </p>
+        <a
+          href="#"
+          style="
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: background-color var(--transition-speed) ease;
+          "
+        >
+          Discover Now
+        </a>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <section id="thai-massage" class="section">
+        <div
+          class="section-header"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+          "
+        >
+          <div style="flex: 1">
+            <h2>
+              <span style="color: var(--primary-color)">🌿</span> Traditional
+              Thai Massage
+            </h2>
+            <div class="section-intro">
+              <p
+                class="lead"
+                style="
+                  color: var(--text-color);
+                  opacity: 0.9;
+                  text-align: justify;
+                "
+              >
+                An ancient healing system from Thailand that blends pressure
+                point therapy with deep stretching.
+              </p>
+            </div>
+          </div>
+          <div
+            class="image-container"
+            style="width: 400px; flex-shrink: 0; margin-left: 2rem"
+          >
+            <img
+              src="images/thai.webp"
+              alt="Traditional Thai Massage"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 8px;
+              "
+            />
+          </div>
+        </div>
+
+        <div class="collapsible-content collapsed">
+          <p style="text-align: justify">
+            <span class="important">Traditional Thai Massage</span>, or
+            <span class="important">Nuad Thai</span>, is often described as
+            "Thai yoga massage." The practitioner guides you through yoga-like
+            stretches while applying rhythmic pressure. This technique combines
+            elements of acupressure, Indian Ayurvedic principles, and assisted
+            yoga postures, reflecting influences from neighboring India and
+            China.
+          </p>
+          <p style="text-align: justify">
+            Historically, Thai massage is said to have been founded by Jivaka,
+            the physician to the Buddha over 2,500 years ago, and it has been
+            passed down through generations as part of Thai traditional
+            medicine. Today, it is even recognized by UNESCO as a part of the
+            intangible cultural heritage of humanity.
+          </p>
+          <p style="text-align: justify">
+            In a typical session, you remain fully clothed in loose attire, and
+            the massage is performed on a mat on the floor without oils. The
+            therapist uses hands, thumbs, elbows, knees, and feet to compress,
+            pull, stretch, and rock your body. By pressing along energy lines
+            known as <span class="important">Sen lines</span> comparable to the
+            meridians in Chinese medicine, the practitioner stimulates the flow
+            of vital energy. The result is an invigorating practice that not
+            only relieves muscle tension but also improves flexibility and
+            promotes overall balance.
+          </p>
+        </div>
+        <button class="read-more-btn">
+          Read more <i class="fas fa-chevron-down"></i>
+        </button>
+      </section>
+    </div>
+
+    <div class="container mt-4">
+      <section id="tui-na" class="section">
+        <div
+          class="section-header"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+          "
+        >
+          <div style="flex: 1">
+            <h2>
+              <span style="color: var(--primary-color)">☯️</span> Chinese Tui Na
+              Massage
+            </h2>
+            <div class="section-intro">
+              <p
+                class="lead"
+                style="
+                  color: var(--text-color);
+                  opacity: 0.9;
+                  text-align: justify;
+                "
+              >
+                One of the pillars of Traditional Chinese Medicine (TCM), often
+                described as therapeutic "medical massage."
+              </p>
+            </div>
+          </div>
+          <div
+            class="image-container"
+            style="width: 400px; flex-shrink: 0; margin-left: 2rem"
+          >
+            <img
+              src="images/chinese.jpg"
+              alt="Chinese Tui Na Massage"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 8px;
+              "
+            />
+          </div>
+        </div>
+
+        <div class="collapsible-content collapsed">
+          <p style="text-align: justify">
+            <span class="important">Chinese Tui Na</span> (pronounced "twee
+            nah") is one of the pillars of Traditional Chinese Medicine (TCM)
+            and is often described as therapeutic "medical massage." Its name,
+            meaning "push and grasp," reflects the manual techniques used.
+            Originating over 2,000 years ago, Tui Na has been used in Chinese
+            hospitals and clinics to treat a variety of conditions.
+          </p>
+          <p style="text-align: justify">
+            Grounded in the principles of acupuncture, Tui Na aims to balance
+            the flow of <span class="important">qi</span> (vital energy) through
+            the body's meridians using techniques such as brushing, kneading,
+            pressing, rolling, and stretching. Unlike the continuous smooth
+            strokes of a Swedish massage, Tui Na's approaches are more varied
+            and might include targeted acupressure and even joint rotations that
+            resemble physical therapy.
+          </p>
+          <p style="text-align: justify">
+            A session often begins with an assessment of your symptoms, followed
+            by a focused treatment on affected areas, be it back pain, neck
+            stiffness, or joint issues. Although some techniques might feel
+            intense initially, especially when applied to deeply knotted areas,
+            the overall experience is designed to improve circulation, promote
+            healing, and harmonize the body's internal energy.
+          </p>
+          <p style="text-align: justify">
+            Tui Na is ideal for clients seeking a results-oriented treatment for
+            specific ailments, but it may be less suited to those desiring a
+            purely gentle, relaxing experience. As with any deep treatment,
+            informing your therapist of any health conditions or injuries
+            ensures that the techniques are properly adjusted.
+          </p>
+        </div>
+        <button class="read-more-btn">
+          Read more <i class="fas fa-chevron-down"></i>
+        </button>
+      </section>
+    </div>
+
+    <div class="container mt-4">
+      <section id="shiatsu" class="section">
+        <div
+          class="section-header"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+          "
+        >
+          <div style="flex: 1">
+            <h2>
+              <span style="color: var(--primary-color)">按摩</span> Japanese
+              Shiatsu
+            </h2>
+            <div class="section-intro">
+              <p
+                class="lead"
+                style="
+                  color: var(--text-color);
+                  opacity: 0.9;
+                  text-align: justify;
+                "
+              >
+                Evolved in Japan, Shiatsu uses finger pressure to stimulate
+                acupressure points and energy channels.
+              </p>
+            </div>
+          </div>
+          <div
+            class="image-container"
+            style="width: 400px; flex-shrink: 0; margin-left: 2rem"
+          >
+            <img
+              src="images/japanese.jpg"
+              alt="Japanese Shiatsu Massage"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 8px;
+              "
+            />
+          </div>
+        </div>
+
+        <div class="collapsible-content collapsed">
+          <p style="text-align: justify">
+            <span class="important">Japanese Shiatsu</span>, which literally
+            means "finger pressure," evolved in Japan in the early 20th century
+            and has gained worldwide recognition for its gentle yet effective
+            approach. Rooted in older Japanese massage practices like
+            <span class="important">Anma</span> and sharing similarities with
+            Chinese acupressure, Shiatsu applies steady pressure using the
+            thumbs, fingers, palms, and sometimes even elbows.
+          </p>
+          <p style="text-align: justify">
+            The technique focuses on stimulating specific acupressure points and
+            energy channels, also known as meridians. This rhythmic sequence of
+            pressure is designed to clear blockages and balance the body's
+            energy, helping to alleviate stress, reduce muscle tension, and
+            improve overall vitality.
+          </p>
+          <p style="text-align: justify">
+            In a typical session, you will either lie on a low futon mat or a
+            massage table while remaining fully clothed. The environment is kept
+            calm and soothing, enhancing the meditative effect of the treatment.
+            Rather than using oils, the consistent, targeted pressure is enough
+            to trigger your body's natural relaxation response.
+          </p>
+          <p style="text-align: justify">
+            Japanese Shiatsu is particularly beneficial for those dealing with
+            stress, back and neck pain, or chronic headaches. Since it is
+            non-invasive and needle-free, it offers a comfortable introduction
+            to acupressure techniques and is well-suited to clients of all ages.
+          </p>
+        </div>
+        <button class="read-more-btn">
+          Read more <i class="fas fa-chevron-down"></i>
+        </button>
+      </section>
+    </div>
+
+    <div class="container mt-4">
+      <section id="ayurvedic-massage" class="section">
+        <div
+          class="section-header"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+          "
+        >
+          <div style="flex: 1">
+            <h2>
+              <span style="color: var(--primary-color)"
+                >🧉 Indian Ayurvedic Abhyanga</span
+              >
+            </h2>
+            <div class="section-intro">
+              <p
+                class="lead"
+                style="
+                  color: var(--text-color);
+                  opacity: 0.9;
+                  text-align: justify;
+                "
+              >
+                A cornerstone of India's ancient healing system, involving warm,
+                herbal oils for body, mind, and spirit.
+              </p>
+            </div>
+          </div>
+          <div
+            class="image-container"
+            style="width: 400px; flex-shrink: 0; margin-left: 2rem"
+          >
+            <img
+              src="images/indian.jpg"
+              alt="Indian Ayurvedic Massage (Abhyanga)"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 8px;
+              "
+            />
+          </div>
+        </div>
+
+        <div class="collapsible-content collapsed">
+          <p style="text-align: justify">
+            <span class="important">Ayurvedic Abhyanga Massage</span> is a
+            cornerstone of India's ancient healing system known as Ayurveda. The
+            term <span class="important">Abhyanga</span> means "massage" in
+            Sanskrit, but it denotes a practice that involves the liberal
+            application of warm, herbal oils over the entire body, aiming to
+            nourish the body, mind, and spirit.
+          </p>
+          <p style="text-align: justify">
+            Rooted in traditions that are over 3,000 years old, Abhyanga is
+            often recommended as part of a daily self-care regimen. The
+            therapist chooses an oil blend suited to your unique constitution
+            (or <span class="important">dosha</span>) with sesame oil being a
+            popular choice for its grounding properties and applies it while
+            performing long, flowing strokes. This process not only lubricates
+            joints and enhances circulation but also supports detoxification by
+            encouraging lymphatic flow.
+          </p>
+          <p style="text-align: justify">
+            The massage is usually performed by one or two therapists who work
+            synchronously to ensure every part of the body receives attention.
+            Unlike intense deep tissue techniques, Abhyanga's pressure is light
+            to moderate, making it a deeply soothing and meditative experience.
+            After the massage, many Ayurvedic practices recommend a brief steam
+            or warm towel treatment to help the oils penetrate further and flush
+            out toxins.
+          </p>
+          <p style="text-align: justify">
+            Clients love Abhyanga for its ability to calm the nervous system,
+            improve sleep, reduce anxiety, and promote overall skin health. As
+            the oil nourishes the skin and muscles, you emerge feeling both
+            relaxed and rejuvenated, a true testament to the holistic nature of
+            Ayurvedic wisdom.
+          </p>
+        </div>
+        <button class="read-more-btn">
+          Read more <i class="fas fa-chevron-down"></i>
+        </button>
+      </section>
+    </div>
+
+    <div class="container mt-4">
+      <section id="korean-hand-therapy" class="section">
+        <div
+          class="section-header"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+          "
+        >
+          <div style="flex: 1">
+            <h2>
+              <span style="color: var(--primary-color)">💆</span> Korean Hand
+              Therapy
+            </h2>
+            <div class="section-intro">
+              <p
+                class="lead"
+                style="
+                  color: var(--text-color);
+                  opacity: 0.9;
+                  text-align: justify;
+                "
+              >
+                A modern therapeutic approach based on the concept that the hand
+                is a microcosm of the entire body.
+              </p>
+            </div>
+          </div>
+          <div
+            class="image-container"
+            style="width: 400px; flex-shrink: 0; margin-left: 2rem"
+          >
+            <img
+              src="images/korean.jpg"
+              alt="Korean Hand Therapy"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 8px;
+              "
+            />
+          </div>
+        </div>
+
+        <div class="collapsible-content collapsed">
+          <p style="text-align: justify">
+            <span class="important">Korean Hand Therapy</span> (KHT), sometimes
+            known as Korean Hand Acupressure or Koryo Hand Therapy, is a more
+            modern therapeutic approach based on the concept that the hand is a
+            microcosm of the entire body. Developed in the 1970s by Dr. Tae-Woo
+            Yoo, KHT maps specific points on the hand that correspond to various
+            organs and regions of the body.
+          </p>
+          <p style="text-align: justify">
+            During a session, the therapist examines your hands to identify
+            areas of sensitivity and then uses acupressure techniques, often
+            with the thumbs and fingers to stimulate targeted points. In some
+            cases, tiny tools or magnets might be applied to prolong the
+            therapeutic effect.
+          </p>
+          <p style="text-align: justify">
+            A typical Korean Hand Therapy session lasts about 30 to 60 minutes
+            and is often performed while you sit comfortably in a chair. The
+            concentrated treatment on the hands can alleviate ailments such as
+            headaches, sinus congestion, digestive issues, and even joint pain.
+            Many clients discover that releasing tension in the hands triggers a
+            broader sense of relaxation and well-being throughout the body.
+          </p>
+          <p style="text-align: justify">
+            This modality is especially appealing if you prefer a non-invasive,
+            focused treatment without the full-body exposure typical of other
+            massages. It is an excellent complement to more extensive bodywork,
+            offering a quick yet powerful burst of relief and balance.
+          </p>
+        </div>
+        <button class="read-more-btn">
+          Read more <i class="fas fa-chevron-down"></i>
+        </button>
+      </section>
+    </div>
+
+    <div class="container mt-4">
+      <section id="balinese-massage" class="section">
+        <div
+          class="section-header"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+          "
+        >
+          <div style="flex: 1">
+            <h2>
+              <span style="color: var(--primary-color)">🪷</span>
+              Indonesian/Balinese Massage
+            </h2>
+            <div class="section-intro">
+              <p
+                class="lead"
+                style="
+                  color: var(--text-color);
+                  opacity: 0.9;
+                  text-align: justify;
+                "
+              >
+                A luxurious spa experience blending Ayurveda, Chinese
+                acupressure, and native Indonesian practices.
+              </p>
+            </div>
+          </div>
+          <div
+            class="image-container"
+            style="width: 400px; flex-shrink: 0; margin-left: 2rem"
+          >
+            <img
+              src="images/indonasian.webp"
+              alt="Indonesian/Balinese Massage"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 8px;
+              "
+            />
+          </div>
+        </div>
+
+        <div class="collapsible-content collapsed">
+          <p style="text-align: justify">
+            <span class="important">Indonesian</span>, or more specifically
+            <span class="important">Balinese</span>, Massage is renowned for its
+            blend of techniques influenced by Ayurveda, Chinese acupressure, and
+            native Indonesian practices. Originating on the beautiful island of
+            Bali, this treatment is often associated with the luxurious spa
+            experiences found at tropical resorts, complete with aromatic oils
+            and soothing music.
+          </p>
+          <p style="text-align: justify">
+            Balinese massage is typically performed on a table with the client
+            draped in comfortable attire. Warm coconut oil, often infused with
+            local herbs and fragrances like lemongrass, ylang-ylang, or
+            sandalwood, is applied generously over the entire body. The
+            therapist uses long, gliding strokes combined with kneading,
+            acupressure, and gentle stretching techniques to relieve tension and
+            improve circulation.
+          </p>
+          <p style="text-align: justify">
+            The treatment's rhythm alternates between deep tissue work on areas
+            of tension and lighter, soothing strokes that calm the body. Many
+            clients report that this multi-dimensional approach not only
+            alleviates muscle pain but also induces a deep sense of relaxation
+            and mental clarity.
+          </p>
+          <p style="text-align: justify">
+            Balinese Massage is ideal if you seek a full-body spa experience
+            that is both therapeutic and indulgent. It caters to those needing
+            stress relief, muscle relaxation, and a touch of exotic wellness, a
+            perfect balance of physical and sensory rejuvenation.
+          </p>
+        </div>
+        <button class="read-more-btn">
+          Read more <i class="fas fa-chevron-down"></i>
+        </button>
+      </section>
+    </div>
+
+    <div class="container mt-4">
+      <section id="tibetan-ku-nye" class="section">
+        <div
+          class="section-header"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+          "
+        >
+          <div style="flex: 1">
+            <h2>
+              <span style="color: var(--primary-color)">🍸</span> Tibetan Ku Nye
+              Massage
+            </h2>
+            <div class="section-intro">
+              <p
+                class="lead"
+                style="
+                  color: var(--text-color);
+                  opacity: 0.9;
+                  text-align: justify;
+                "
+              >
+                A traditional healing therapy rooted in the ancient practices of
+                Traditional Tibetan Medicine.
+              </p>
+            </div>
+          </div>
+          <div
+            class="image-container"
+            style="width: 400px; flex-shrink: 0; margin-left: 2rem"
+          >
+            <img
+              src="images/tibetan.jpg"
+              alt="Tibetan Ku Nye Massage"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 8px;
+              "
+            />
+          </div>
+        </div>
+
+        <div class="collapsible-content collapsed">
+          <p style="text-align: justify">
+            <span class="important">Tibetan Ku Nye Massage</span> is a
+            traditional healing therapy rooted in the ancient practices of
+            Traditional Tibetan Medicine. The term "Ku Nye" translates to "oil
+            massage," and the treatment involves generously applying warmed
+            herbal oils and gentle manual techniques to balance the body's
+            energy.
+          </p>
+          <p style="text-align: justify">
+            Drawing influences from Indian Ayurveda, Chinese medicine, and
+            indigenous Tibetan practices, Ku Nye focuses on harmonizing the
+            three humors, wind, bile, and phlegm, that, when imbalanced, lead to
+            various physical and mental ailments. This healing modality is
+            traditionally used to alleviate stress, improve circulation, and
+            restore overall balance.
+          </p>
+          <p style="text-align: justify">
+            A typical session begins with the application of therapeutic oils
+            infused with Tibetan herbs, followed by massage strokes that include
+            rubbing, kneading, and light acupressure. The session often extends
+            to specific techniques such as gentle stretching and the use of mild
+            heat from hot stones or compresses. Some treatments even conclude
+            with a unique flour rub to remove excess oil and exfoliate the skin.
+          </p>
+          <p style="text-align: justify">
+            Clients often remark on the deep sense of calm and revitalization
+            experienced during and after a Ku Nye session. It is particularly
+            beneficial for alleviating chronic stress, tension headaches, and
+            joint stiffness, while simultaneously nourishing the skin and
+            soothing the mind.
+          </p>
+        </div>
+        <button class="read-more-btn">
+          Read more <i class="fas fa-chevron-down"></i>
+        </button>
+      </section>
+    </div>
+
+    <div class="container mt-4">
+      <section class="section">
+        <div class="text-center py-4">
+          <h2>Conclusion</h2>
+          <p style="text-align: center">
+            From the energizing stretches of Thai Massage to the soothing herbal
+            oils of Abhyanga, the world of Asian massage modalities is
+            incredibly diverse. Each tradition – Thai, Chinese, Japanese,
+            Indian, Korean, Indonesian, and Tibetan – brings its own unique
+            philosophy and techniques to the table, yet all share a profound
+            commitment to holistic healing and balance.
+          </p>
+          <p style="text-align: center">
+            Understanding the nuances of each modality can help you choose the
+            best treatment to address your specific needs, whether that means
+            relieving chronic pain, reducing stress, or simply enjoying a
+            blissful state of relaxation. Consider how these therapies can
+            complement one another; a focused session of Korean Hand Therapy may
+            pair well with the comprehensive treatment of a full-body Balinese
+            massage.
+          </p>
+          <p style="text-align: center">
+            Ultimately, exploring these traditional methods opens the door to a
+            more balanced mind and body, providing an enriching journey into the
+            healing arts of Asia. Embrace the wisdom of these ancient therapies,
+            and allow yourself the gift of wellness through the therapeutic
+            touch of the East.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0 text-center text-lg-left">
+            <h5 class="font-weight-bold mb-3">Asian Heal</h5>
+            <p>
+              <i
+                class="fas fa-map-marker-alt mr-2"
+                style="color: var(--primary-color)"
+              ></i>
+              XXXXXXXXXXX
+            </p>
+            <p>
+              <i
+                class="fas fa-phone-alt mr-2"
+                style="color: var(--primary-color)"
+              ></i>
+              +880 XXX XXX XXX
+            </p>
+            <p>
+              <i
+                class="fas fa-envelope mr-2"
+                style="color: var(--primary-color)"
+              ></i>
+              XXXXXXX@gmail.com
+            </p>
+          </div>
+          <div class="col-lg-4 mb-4 mb-lg-0 text-center">
+            <h5 class="font-weight-bold mb-3">Explore</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="/about"
+                  class="text-decoration-none"
+                  style="color: var(--text-color)"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services"
+                  class="text-decoration-none"
+                  style="color: var(--text-color)"
+                  >Our Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  class="text-decoration-none"
+                  style="color: var(--text-color)"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/privacy-policy"
+                  class="text-decoration-none"
+                  style="color: var(--text-color)"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/terms-of-service"
+                  class="text-decoration-none"
+                  style="color: var(--text-color)"
+                  >Terms of Service</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 text-center text-lg-right">
+            <h5 class="font-weight-bold mb-3">Connect With Us</h5>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#" style="color: var(--icon-color)"
+                  ><i class="fab fa-facebook fa-2x"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" style="color: var(--icon-color)"
+                  ><i class="fab fa-instagram fa-2x"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" style="color: var(--icon-color)"
+                  ><i class="fab fa-twitter fa-2x"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" style="color: var(--icon-color)"
+                  ><i class="fab fa-linkedin fa-2x"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr style="border-color: var(--border-color)" />
+        <div class="text-center" style="color: var(--text-color)">
+          &copy; 2025 Asian Heal. All rights reserved. | Developed by Ishmam,
+          Bangladesh
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script>
+      // Set dark theme as default
+      document.body.setAttribute("data-theme", "dark");
+
+      // Rest of your existing JavaScript...
+      document
+        .querySelector(".navbar-toggler")
+        .addEventListener("click", function () {
+          document
+            .querySelector(".header-container")
+            .classList.toggle("nav-open");
+        });
+
+      // Toggle dark/light mode
+      const themeToggle = document.querySelector(".theme-toggle");
+      const icon = themeToggle.querySelector("i");
+
+      themeToggle.addEventListener("click", function () {
+        document.body.setAttribute(
+          "data-theme",
+          document.body.getAttribute("data-theme") === "light"
+            ? "dark"
+            : "light"
+        );
+
+        // Toggle sun/moon icon
+        if (icon.classList.contains("fa-sun")) {
+          icon.classList.remove("fa-sun");
+          icon.classList.add("fa-moon");
+        } else {
+          icon.classList.remove("fa-moon");
+          icon.classList.add("fa-sun");
+        }
+      });
+
+      // Collapsible content functionality
+      document.querySelectorAll(".read-more-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+          const content = this.previousElementSibling;
+          const icon = this.querySelector("i");
+
+          content.classList.toggle("collapsed");
+          content.classList.toggle("expanded");
+          this.classList.toggle("expanded");
+
+          if (content.classList.contains("expanded")) {
+            this.textContent = "Read less ";
+          } else {
+            this.textContent = "Read more ";
+          }
+
+          // Re-append the icon
+          this.appendChild(icon);
+        });
+      });
+    </script>
+  </body>
+</html>
